@@ -1,0 +1,7 @@
+#!/usr/bin/env python3
+
+from package_two.module_two import SimpleClass
+
+simple_class = SimpleClass()
+simple_class.get_input()
+simple_class.print_result()
