@@ -3,7 +3,7 @@ A source-code template for Python3 applications.
 
 ## Road-map
 - [x] Standard python source-code structure.
-- [ ] Unit testing (pytest) and test reports.
+- [x] Unit testing (pytest) and test reports.
 - [ ] Mocking
 - [ ] Virtual environments
 - [ ] Dependency management
