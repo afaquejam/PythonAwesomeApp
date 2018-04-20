@@ -1,7 +1,6 @@
 class IntegerAdder(object):
-    def __init__(self, operand_one, operand_two):
-        self.operand_one = operand_one
-        self.operand_two = operand_two
+    def __init__(self):
+        pass
 
-    def add(self):
-        return self.operand_one + self.operand_two
+    def add(self, operand_one, operand_two):
+        return operand_one + operand_two

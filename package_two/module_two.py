@@ -3,13 +3,19 @@ from package_one.module_one import IntegerAdder
 class SimpleClass(object):
     def __init__(self):
         self.name = None
-        self.adder = None
+        self.operand_one = None
+        self.operand_two = None
+        self.adder = IntegerAdder()
 
     def get_input(self):
         self.name = input('Enter thy holy name: ')
-        first_num = int(input("Enter first number: "))
-        second_num = int(input("Enter second number: "))
-        self.adder = IntegerAdder(first_num, second_num)
+        self.operand_one = int(input("Enter first number: "))
+        self.operand_two = int(input("Enter second number: "))
 
     def print_result(self):
-        print("Hello {}. The result is {}.".format(self.name, self.adder.add()))
+        print(
+            "Hello {}. The result is {}.".format(
+                self.name,
+                self.adder.add(self.operand_one, self.operand_two)
+            )
+        )

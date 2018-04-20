@@ -3,10 +3,8 @@ A source-code template for Python3 applications.
 
 ## Road-map
 - [x] Standard python source-code structure.
-- [ ] Module example.
-- [ ] Class example.
-- [ ] Function example.
-- [ ] Unit testing, mocking and test reports.
+- [ ] Unit testing (pytest) and test reports.
+- [ ] Mocking
 - [ ] Virtual environments
 - [ ] Dependency management
 - [ ] PyReverse.
