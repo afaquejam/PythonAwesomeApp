@@ -106,3 +106,7 @@ virtualenv
 
 # IDE files
 .vscode
+
+# Profiling files
+*.prof
+*.dat

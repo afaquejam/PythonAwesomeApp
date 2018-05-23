@@ -6,7 +6,7 @@ A source-code template for Python3 applications.
 - [x] Unit testing (pytest) and test reports.
 - [x] Mocking
 - [x] Virtual environments & dependency mgmt.
-- [ ] Profiling (CPU, memory & I/O usage)
+- [x] Profiling (CPU, memory & I/O usage)
 - [ ] Notes: Automate linting and enforcing code standards.
 - [ ] Documentation: changelog, release notes and git-tagging.
 - [ ] Application packaging & release.
@@ -76,7 +76,7 @@ A source-code template for Python3 applications.
 
 ## Testing & Mocking
 * Use Pytest.
-  - Use pytest fixtures for setting up and teardown functions.
+  - Use pytest fixtures for set-up and teardown functions.
   - Use parametrized tests.
   - Use pytest-cov to generate test reports.
   - Use pytest plugins to enhance your test reports.
@@ -84,7 +84,21 @@ A source-code template for Python3 applications.
   - Use unittest.mock
 
 ## Profiling
-* CPU & Memory Usage.
+* Measuing running time of a program:
+  ```
+  python3 -m cProfile -o app.prof awesome_app
+  snakeviz app.prof
+  ```
+* Measuring Memroy Consumption of a program:
+  ```
+  mprof run ./awesome_app
+  mprof plot
+  ```
+
+* Measuring I/O
+  - Network: `nethogs`
+  - Disk: `iotop`
+  - Both provide rudimentary interface to view the I/O information.
 
 ## Linting
 * PEP8 Coding standards.
