@@ -104,12 +104,19 @@ A source-code template for Python3 applications.
 * PEP 8 style guide (https://bit.ly/1ARqSBt) is recommended.
 * Automate linting in your favorite code-editor.
 * For example, in Visual Studio Code, install the `Python` package which will automate the linting for your python source-code.
-  
+
 ## Documentation
-* Application documentation.
-* Changelog.
-* Release notes.
-* Git tagging.
+* Changelog, git-tagging & release notes.
+  - Changelog guidelines by `Keep a Changelog` are recommended: https://keepachangelog.com/en/1.0.0/
+  - Use `git-tags` to tag your git repository and keep it consistent with the changelog.
+  - Maintaining release notes is up-to you how you maintain them. Example release notes: https://atom.io/releases
+  - You might argue that what's the difference between between changelog and release notes? In my opinion, changelog is much more verbose than release notes. However it's up-to you how you differentiate between them.
+
+* User documentation
+  - Please make sure you have instructions how to install your software, it's dependencies and run it.
+
+* Developer documentation
+  - Make sure you have relevant documentation for developers such that they can navigate, read, understand and contribute to the project.
 
 ## Packaging & Release
 * Information on packaging and release.
