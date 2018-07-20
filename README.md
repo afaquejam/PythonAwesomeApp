@@ -101,9 +101,10 @@ A source-code template for Python3 applications.
   - Both provide rudimentary interface to view the I/O information.
 
 ## Linting
-* PEP8 Coding standards.
-* Automatic linting in the IDEs.
-
+* PEP 8 style guide (https://bit.ly/1ARqSBt) is recommended.
+* Automate linting in your favorite code-editor.
+* For example, in Visual Studio Code, install the `Python` package which will automate the linting for your python source-code.
+  
 ## Documentation
 * Application documentation.
 * Changelog.
