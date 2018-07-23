@@ -119,7 +119,13 @@ A source-code template for Python3 applications.
   - Make sure you have relevant documentation for developers such that they can navigate, read, understand and contribute to the project.
 
 ## Packaging & Release
-* Information on packaging and release.
+* There are different ways to package a Python app depending on how it's going to be used. Here's a nice introduction on the topic: https://docs.python-guide.org/shipping/packaging/
+* If the app you're developing is a library, then packaging it  as a `wheel` distribution and/or uploading it to PyPI is an option. Here's a good tutorial on it: https://packaging.python.org/tutorials/packaging-projects/
+* If you're distributing your app as a standalone application, then `pyinstaller` is the magical tool for you. This tool can produce a self-contained single app file, which contains the Python interpretor, the app and it's dependencies, for all Mac, Windows & Linux. Steps to create a distribution package for your app (it'll produce binaries for the OS on which it's built):
+  - One time step: `pip3 install pyinstaller`
+  - `pyinstaller awesome_app -n awesome_app --onefile`
+  - In this case, `awesome_app` is the main script which gets executed and `-n` option is the name of the app.
+  - This will create the app binary `dist` folder. Copy and distribute. Simple as that!
 
 ## Other Relevant Topics
 * Async operation

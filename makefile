@@ -16,6 +16,7 @@ clean:
 	-find . -name "__pycache__" -delete
 	-rm -rf .pytest_cache
 	-rm -rf reports
+	-rm -rf awesome_app.spec build dist
 
 hard-clean:
 	-rm -rf virtualenv
