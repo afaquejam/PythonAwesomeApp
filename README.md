@@ -7,12 +7,12 @@ A source-code template for Python3 applications.
 - [x] Mocking
 - [x] Virtual environments & dependency mgmt.
 - [x] Profiling (CPU, memory & I/O usage)
-- [ ] Notes: Automate linting and enforcing code standards.
-- [ ] Documentation: changelog, release notes and git-tagging.
-- [ ] Application packaging & release.
+- [x] Notes: Automate linting and enforcing code standards.
+- [x] Documentation: changelog, release notes and git-tagging.
+- [x] Application packaging & release.
+- [x] Notes: Multi-threading.
+- [x] Notes: Multi-processing.
 - [ ] Notes: Async operation.
-- [ ] Notes: Multi-threading.
-- [ ] Notes: Multi-processing.
 - [ ] Notes: PyPy.
 - [ ] Notes: PyReverse.
 - [ ] Polish this repository.
@@ -127,9 +127,20 @@ A source-code template for Python3 applications.
   - In this case, `awesome_app` is the main script which gets executed and `-n` option is the name of the app.
   - This will create the app binary `dist` folder. Copy and distribute. Simple as that!
 
+## Concurrency & Parallelism
+* Concurrent programs can be written using Python's `threading` module. However, please note that due to the Global Interpretor Lock (GIL) in CPython & PyPy, threads will not execute in parallel.
+* If you want to achieve true parallelism on a multi-core processor system, then `multiprocessing` module provides a way to spawn multiple processes, which can run parallely.
+* Python provides good thread and process synchronization mechanisms. You can check their respective sync. mechanisms.
+* Queues are recommended ways for inter-thread and inter-process communication.
+* Relevant resources:
+  - `threading`: https://pymotw.com/3/threading/index.html
+  - `multiprocessing`: https://pymotw.com/3/multiprocessing/index.html
+  - Thread sync mechanisms: https://docs.python.org/3/library/threading.html#lock-objects
+  - Process sync mechanisms: https://docs.python.org/3.7/library/multiprocessing.html#synchronization-between-processes
+  - Queue: https://pymotw.com/3/queue/index.html
+
 ## Other Relevant Topics
 * Async operation
-* Multi-threading
-* Multi-processing
+
 * PyPy
 * PyReverse
