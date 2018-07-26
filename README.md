@@ -139,8 +139,12 @@ A source-code template for Python3 applications.
   - Process sync mechanisms: https://docs.python.org/3.7/library/multiprocessing.html#synchronization-between-processes
   - Queue: https://pymotw.com/3/queue/index.html
 
-## Other Relevant Topics
-* Async operation
+## Async. Stuff
+* `async` and `await` is the way to go (v3.5 & above).
+* The documentation on this topic not good.
+* A talk on this topic from its creator: https://www.youtube.com/watch?v=m28fiN9y_r8
+* Other resource: https://pymotw.com/3/asyncio/
 
+## Other Relevant Topics
 * PyPy
 * PyReverse
