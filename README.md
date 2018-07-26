@@ -5,16 +5,16 @@ A source-code template for Python3 applications.
 - [x] Standard python source-code structure.
 - [x] Unit testing (pytest) and test reports.
 - [x] Mocking
-- [x] Virtual environments & dependency mgmt.
+- [x] Virtual environments & dependency management.
 - [x] Profiling (CPU, memory & I/O usage)
 - [x] Notes: Automate linting and enforcing code standards.
 - [x] Documentation: changelog, release notes and git-tagging.
 - [x] Application packaging & release.
 - [x] Notes: Multi-threading.
 - [x] Notes: Multi-processing.
-- [ ] Notes: Async operation.
-- [ ] Notes: PyPy.
-- [ ] Notes: PyReverse.
+- [x] Notes: Async operation.
+- [x] Notes: PyPy.
+- [x] Notes: PyReverse.
 - [ ] Polish this repository.
 - [ ] Prepare slides.
 
@@ -77,19 +77,19 @@ A source-code template for Python3 applications.
 ## Testing & Mocking
 * Use Pytest.
   - Use pytest fixtures for set-up and teardown functions.
-  - Use parametrized tests.
+  - Use parameterized tests.
   - Use pytest-cov to generate test reports.
   - Use pytest plugins to enhance your test reports.
 * Mocking
   - Use unittest.mock
 
 ## Profiling
-* Measuing running time of a program:
+* Measuring running time of a program:
   ```
   python3 -m cProfile -o app.prof awesome_app
   snakeviz app.prof
   ```
-* Measuring Memroy Consumption of a program:
+* Measuring Memory Consumption of a program:
   ```
   mprof run ./awesome_app
   mprof plot
@@ -121,7 +121,7 @@ A source-code template for Python3 applications.
 ## Packaging & Release
 * There are different ways to package a Python app depending on how it's going to be used. Here's a nice introduction on the topic: https://docs.python-guide.org/shipping/packaging/
 * If the app you're developing is a library, then packaging it  as a `wheel` distribution and/or uploading it to PyPI is an option. Here's a good tutorial on it: https://packaging.python.org/tutorials/packaging-projects/
-* If you're distributing your app as a standalone application, then `pyinstaller` is the magical tool for you. This tool can produce a self-contained single app file, which contains the Python interpretor, the app and it's dependencies, for all Mac, Windows & Linux. Steps to create a distribution package for your app (it'll produce binaries for the OS on which it's built):
+* If you're distributing your app as a standalone application, then `pyinstaller` is the magical tool for you. This tool can produce a self-contained single app file, which contains the Python interpreter, the app and it's dependencies, for all Mac, Windows & Linux. Steps to create a distribution package for your app (it'll produce binaries for the OS on which it's built):
   - One time step: `pip3 install pyinstaller`
   - `pyinstaller awesome_app -n awesome_app --onefile`
   - In this case, `awesome_app` is the main script which gets executed and `-n` option is the name of the app.
@@ -139,12 +139,22 @@ A source-code template for Python3 applications.
   - Process sync mechanisms: https://docs.python.org/3.7/library/multiprocessing.html#synchronization-between-processes
   - Queue: https://pymotw.com/3/queue/index.html
 
-## Async. Stuff
+## Async.
 * `async` and `await` is the way to go (v3.5 & above).
 * The documentation on this topic not good.
 * A talk on this topic from its creator: https://www.youtube.com/watch?v=m28fiN9y_r8
 * Other resource: https://pymotw.com/3/asyncio/
 
-## Other Relevant Topics
-* PyPy
-* PyReverse
+## Improving Performance: PyPy
+* Pypy claims to be approx. 7 times faster than CPython. It's generally useful in case your app runs for a long time, in contrast to a Python script which just does one-off operation.
+* Tread carefully, since we're in the realm of performance optimization. I agree with taking the following steps before performing any optimization:
+  - Measure app performance.
+  - Profile your code.
+  - Optimize.
+* Also, please identify if your app's core logic is `compute-bound` or `I/O bound`. With PyPy, `compute-bound` code can be optimized.
+
+## PyReverse
+* Using PyReverse, you can generate UML diagrams for your app. This can be helpful in understanding and refactoring your code.
+* Installation: `sudo apt-get install pylint`
+* Usage (run this command from outside the project's directory): `pyreverse -o png -p PythonAwesomeApp PythonAwesomeApp/`
+* Class diagram of this app: ![class diagram](docs/classes_awesome.png)

@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.10.0] - 26th July, 2018
 ### Added
 * Notes on Async.
+* Notes on Pypy.
+* Notes on Pyreverse.
   
 ## [0.9.0] - 24th July, 2018
 ### Added
