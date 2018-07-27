@@ -2,6 +2,18 @@
 A source-code template for Python3 applications.
 
 ## Quick-Start
+*Please note that, as of now, these instructions are applicable to linux based systems (Ubuntu). Support for MacOS & Windows will be coming soon.*
+
+### Creating a Python project based on this template
+* Install cookiecutter
+  
+  `pip install --user cookiecutter`
+
+* Create a python project
+  
+  `python3 -m cookiecutter https://github.com/afaquejam/PythonAwesomeAppTemplate.git`
+
+### Running this app
 * Clone this source-code repository:
 
   `git clone git@github.com:afaquejam/PythonAwesomeApp.git`
@@ -14,6 +26,10 @@ A source-code template for Python3 applications.
 * Install dependencies:
 
   `pip3 install -r requirements.txt`
+
+* Run the app:
+  
+  `make`
 
 * Run the tests:
 
