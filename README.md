@@ -1,24 +1,6 @@
 # PythonAwesomeApp
 A source-code template for Python3 applications.
 
-## Road-map
-- [x] Standard python source-code structure.
-- [x] Unit testing (pytest) and test reports.
-- [x] Mocking
-- [x] Virtual environments & dependency management.
-- [x] Profiling (CPU, memory & I/O usage)
-- [x] Notes: Automate linting and enforcing code standards.
-- [x] Documentation: changelog, release notes and git-tagging.
-- [x] Application packaging & release.
-- [x] Notes: Multi-threading.
-- [x] Notes: Multi-processing.
-- [x] Notes: Async operation.
-- [x] Notes: PyPy.
-- [x] Notes: PyReverse.
-- [ ] Polish this repository.
-- [ ] Prepare slides.
-
-
 ## Quick-Start
 * Clone this source-code repository:
 
@@ -46,32 +28,27 @@ A source-code template for Python3 applications.
   `deactivate`
 
 ## Source-Code Organization
+* Source-code organization guidelines are [here](docs/source_code_org.md). Please note that in this project, `__init__.py` has been used because it was a requirement of the  `pyreverse` tool.
+* The source-code organization of this project looks as show below. Please note that some directories have not been shown for readability purposes.
 ```
 .
+├── __init__.py
 ├── awesome_app
-├── awesome_app_test
-├── _config.yml
-├── docs
-│   └── source_code_org.md
-├── LICENSE
-├── makefile
 ├── package_one
-│   ├── config
+│   ├── __init__.py
+│   ├── module_one.py
+│   ├── config
 │   │   └── integer_adder.cfg
-│   ├── module_one.py
 │   └── tests
 │       └── test_integer_adder.py
-├── package_two
-│   ├── config
-│   │   └── module_two.cfg
-│   ├── errors.py
-│   ├── module_two.py
-│   └── tests
-│       └── test_public_ip_address_class.py
+.
+.
+.
+├── makefile
+├── LICENSE
+├── CHANGELOG.md
 ├── README.md
 └── requirements.txt
-
-7 directories, 15 files
 ```
 
 ## Testing & Mocking
@@ -82,6 +59,7 @@ A source-code template for Python3 applications.
   - Use pytest plugins to enhance your test reports.
 * Mocking
   - Use unittest.mock
+* Run: `make test_report` to see the test reports and code-coverage.
 
 ## Profiling
 * Measuring running time of a program:
