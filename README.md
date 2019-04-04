@@ -140,7 +140,7 @@ A source-code template for Python3 applications.
 ## Linting
 * PEP 8 style guide (https://bit.ly/1ARqSBt) is recommended.
 * Automate linting in your favorite code-editor.
-* For example, in Visual Studio Code, install the `Python` package which will automate the linting for your python source-code.
+* Configuring VSCode for Python programming: https://gist.github.com/afaquejam/af1c3a2d3ab00aa8528d945d98bf5a57
 
 ## Documentation
 * Changelog, git-tagging & release notes.
